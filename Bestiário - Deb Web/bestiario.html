@@ -225,7 +225,6 @@
 
             content.innerHTML = htmlContent;
 
-            // Atualiza a classe 'selected' na sidebar
             document.querySelectorAll('.sidebar ul li').forEach((item) => item.classList.remove('selected'));
             if (section !== 'default') {
                 document.querySelector(`[onclick="showContent('${section}')"]`).parentElement.classList.add('selected');
