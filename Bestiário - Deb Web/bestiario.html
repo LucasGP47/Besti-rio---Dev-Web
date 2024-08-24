@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiário - The Witcher 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #ddd;
+            background-color: #1e1e1e;
+            margin: 0;
+            padding: 0;
+            background-image: url("C:\\Users\\lucas\\OneDrive\\Documentos\\Bestiário - Deb Web\\Imagens\\the-witcher-3-wild-hunt-battle-with-monster-wallpaper-1680x1050_5.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+        }
+
+        .sidebar h2, .sidebar h3 {
+            color: #b58634;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li.selected {
+            background-color: #444;
+            border-left: 4px solid #b58634;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        .content h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #b58634;
+        }
+
+        .monster-details {
+            display: flex;
+        }
+
+        .monster-details img {
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        .description {
+            font-size: 1em;
+            line-height: 1.6em;
+            max-width: 600px;
+        }
+
+        .effective-against {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #b58634;
+        }
+
+        .icons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .icons img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        function showContent(section) {
+            const content = document.querySelector('.content');
+            let htmlContent = '';
+
+            switch (section) {
+                case 'cerberus':
+                    htmlContent = `
+                        <h1>Cérberos da Caçada Selvagem</h1>
+                        <div class="monster-details">
+                            <img src="cerberus.png" alt="Cérberos da Caçada Selvagem">
+                            <div class="description">
+                                <p>Howling alongside the Wild Hunt...</p>
+                                <p>Nascidos, segundo alguns...</p>
+                            </div>
+                        </div>
+                        <div class="effective-against">
+                            <p>Efetivo para lutar contra o seguinte monstro:</p>
+                            <div class="icons">
+                                <!-- Ícones dos sinais e poções -->
+                            </div>
+                        </div>`;
+                    break;
+                case 'golens':
+                    htmlContent = `
+                        <h1>Golens</h1>
+                        <div class="monster-details">
+                            <img src="golens.png" alt="Golens">
+                            <div class="description">
+                                <p>Descrição dos Golens...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'gargulas':
+                    htmlContent = `
+                        <h1>Gárgulas</h1>
+                        <div class="monster-details">
+                            <img src="gargulas.png" alt="Gárgulas">
+                            <div class="description">
+                                <p>Descrição das Gárgulas...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'draconideos':
+                    htmlContent = `
+                        <h1>Draconídeos</h1>
+                        <div class="monster-details">
+                            <img src="draconideos.png" alt="Draconídeos">
+                            <div class="description">
+                                <p>Descrição dos Draconídeos...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'espectros':
+                    htmlContent = `
+                        <h1>Espectros</h1>
+                        <div class="monster-details">
+                            <img src="espectros.png" alt="Espectros">
+                            <div class="description">
+                                <p>Descrição dos Espectros...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'feras':
+                    htmlContent = `
+                        <h1>Feras</h1>
+                        <div class="monster-details">
+                            <img src="feras.png" alt="Feras">
+                            <div class="description">
+                                <p>Descrição das Feras...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'hibridos':
+                    htmlContent = `
+                        <h1>Híbridos</h1>
+                        <div class="monster-details">
+                            <img src="hibridos.png" alt="Híbridos">
+                            <div class="description">
+                                <p>Descrição dos Híbridos...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'insetoides':
+                    htmlContent = `
+                        <h1>Insetoides</h1>
+                        <div class="monster-details">
+                            <img src="insetoides.png" alt="Insetoides">
+                            <div class="description">
+                                <p>Descrição dos Insetoides...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'necrofagos':
+                    htmlContent = `
+                        <h1>Necrófagos</h1>
+                        <div class="monster-details">
+                            <img src="necrofagos.png" alt="Necrófagos">
+                            <div class="description">
+                                <p>Descrição dos Necrófagos...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'afogadores':
+                    htmlContent = `
+                        <h1>Afogadores</h1>
+                        <div class="monster-details">
+                            <img src="afogadores.png" alt="Afogadores">
+                            <div class="description">
+                                <p>Descrição dos Afogadores...</p>
+                            </div>
+                        </div>`;
+                    break;
+                case 'bruxa':
+                    htmlContent = `
+                        <h1>Bruxa Lamuriosa</h1>
+                        <div class="monster-details">
+                            <img src="bruxa.png" alt="Bruxa Lamuriosa">
+                            <div class="description">
+                                <p>Descrição da Bruxa Lamuriosa...</p>
+                            </div>
+                        </div>`;
+                    break;
+                default:
+                    htmlContent = `<h1>Bem-vindo ao Bestiário</h1><p>Selecione uma categoria na barra lateral para ver mais informações.</p>`;
+            }
+
+            content.innerHTML = htmlContent;
+
+            // Atualiza a classe 'selected' na sidebar
+            document.querySelectorAll('.sidebar ul li').forEach((item) => item.classList.remove('selected'));
+            if (section !== 'default') {
+                document.querySelector(`[onclick="showContent('${section}')"]`).parentElement.classList.add('selected');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Construtos</h2>
+            <ul>
+                <li class="selected"><a href="#" onclick="showContent('cerberus')">Cérberos da Caçada Selvagem</a></li>
+                <li><a href="#" onclick="showContent('golens')">Golens</a></li>
+                <li><a href="#" onclick="showContent('gargulas')">Gárgulas</a></li>
+            </ul>
+            <h3><a href="#" onclick="showContent('draconideos')">Draconídeos</a></h3>
+            <h3><a href="#" onclick="showContent('espectros')">Espectros</a></h3>
+            <h3><a href="#" onclick="showContent('feras')">Feras</a></h3>
+            <h3><a href="#" onclick="showContent('hibridos')">Híbridos</a></h3>
+            <h3><a href="#" onclick="showContent('insetoides')">Insetoides</a></h3>
+            <h3><a href="#" onclick="showContent('necrofagos')">Necrófagos</a></h3>
+            <ul>
+                <li><a href="#" onclick="showContent('afogadores')">Afogadores</a></li>
+                <li><a href="#" onclick="showContent('bruxa')">Bruxa Lamuriosa</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Bem-vindo ao Bestiário</h1>
+            <p>Selecione uma categoria na barra lateral para ver mais informações.</p>
+        </div>
+    </div>
+</body>
+</html>
