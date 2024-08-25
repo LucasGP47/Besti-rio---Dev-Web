@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ddd;
+    background-color: #1e1e1e;
+    margin: 0;
+    padding: 0;
+    background-image: url("C:\\Users\\lucas\\OneDrive\\Documentos\\Bestiário - Deb Web\\Imagens\\the-witcher-3-wild-hunt-battle-with-monster-wallpaper-1680x1050_5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+}
+
+.sidebar h2, .sidebar h3 {
+    color: #b58634;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li.selected {
+    background-color: #444;
+    border-left: 4px solid #b58634;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #b58634;
+}
+
+.monster-details {
+    display: flex;
+}
+
+.monster-details img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.6em;
+    max-width: 600px;
+}
+
+.effective-against {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #b58634;
+}
+
+.icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+}
